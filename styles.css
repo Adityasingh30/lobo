@@ -1,0 +1,76 @@
+/* Reset some default styles */
+body, h1, p, label, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1898cb;
+  text-align: center;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #2e1761;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #FF5722;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px solid #e44a4a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #E64A19;
+  transform: scale(1.05);
+}

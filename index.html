@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="user signinBox">
+                <div class="imgBox">
+                    <img src="img/signinIMG.jpg" alt="">
+                </div>
+                <div class="formBox">
+                    <form id="loginForm" onsubmit="return login()">
+                        <h2>Login</h2>
+                        <input type="email" name="email" placeholder="Enter Email" id="loginEmail" required>
+                        <input type="password" name="password" placeholder="Enter Password" id="loginPassword" required>
+                        <input type="submit" value="Login">
+                        <p class="signup">Create an Account <a href="#" onclick="javascript:doToggle();">Sign Up</a></p>
+                    </form></div> </div>
+            <div class="user signupBox">
+                <div class="formBox">
+                    <form id="signupForm" onsubmit="return signup()">
+                        <h2>Create An Account</h2>
+                        <input type="text" name="username" placeholder="Enter Username" id="signupUsername" required>
+                        <input type="email" name="email" placeholder="Enter Email" id="signupEmail" required>
+                        <input type="password" name="password" placeholder="Enter Password" id="signupPassword" required>
+                        <input type="password" name="confirmPassword" placeholder="Confirm Password" id="signupConfirmPassword" required>
+                        <input type="submit" value="Sign Up">
+                        <p class="signup">Already have an Account? <a href="#" onclick="javascript:doToggle();">Login</a></p>
+                    </form></div></div>
+</div>
+    </section>
+    <script type="text/javascript">
+        function doToggle() {
+            var container = document.querySelector('.container');
+            container.classList.toggle('active');
+        }
+
+        function login() {
+            // Perform your login validation here
+            var loginEmail = document.getElementById('loginEmail').value;
+            var loginPassword = document.getElementById('loginPassword').value;
+
+            // Example: Check if the email and password match (replace with your own logic)
+            if (loginEmail === 'example@example.com' && loginPassword === 'password') {
+                // If login is successful, you can redirect to the previous HTML form
+                // Replace 'previous_form.html' with your actual URL
+                window.location.href = 'previous_form.html';
+                return false; // Prevent form submission
+            } else {
+                alert('Invalid login credentials. Please try again.');
+                return false; // Prevent form submission
+            }
+        }
+
+        function signup() {
+            // Perform your signup validation here
+            // Add your signup logic and validation as needed
+
+            // After successful signup, you can redirect to the previous HTML form
+            // Replace 'previous_form.html' with your actual URL
+            window.location.href = 'survey.html';
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
